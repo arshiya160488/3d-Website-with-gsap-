@@ -1,0 +1,154 @@
+.intro {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 10% 8%;
+  box-sizing: border-box;
+
+  background: #0a0a0a;
+  color: #fff;
+
+  overflow: hidden;
+}
+
+.intro::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  top: 50%;
+  right: -150px;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  top: 50%;
+  right: -75px;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+
+  transform: translateY(-50%);
+}
+
+.intro__wrapper {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1200px;
+
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 60px;
+}
+
+.intro__number {
+  padding-top: 10px;
+}
+
+.intro__number span {
+  font-size: 14px;
+  letter-spacing: 3px;
+  opacity: 0.4;
+}
+
+.intro__content {
+  max-width: 800px;
+}
+
+.intro__eyebrow {
+  margin: 0 0 25px;
+
+  font-size: 12px;
+  letter-spacing: 4px;
+  opacity: 0.5;
+}
+
+.intro__title {
+  margin: 0;
+
+  font-size: clamp(60px, 8vw, 130px);
+  line-height: 0.9;
+  letter-spacing: -5px;
+  font-weight: 800;
+}
+
+.intro__title span {
+  display: block;
+
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.intro__description {
+  max-width: 550px;
+  margin: 45px 0 35px;
+
+  font-size: 17px;
+  line-height: 1.8;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.intro__line {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.intro__meta {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 20px;
+
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@media (max-width: 768px) {
+  .intro {
+    padding: 100px 6%;
+  }
+
+  .intro__wrapper {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .intro__number {
+    padding-top: 0;
+  }
+
+  .intro__title {
+    font-size: clamp(55px, 15vw, 90px);
+    letter-spacing: -4px;
+  }
+
+  .intro__description {
+    margin-top: 35px;
+  }
+
+  .intro::before {
+    width: 350px;
+    height: 350px;
+  }
+
+  .intro::after {
+    width: 240px;
+    height: 240px;
+  }
+}
